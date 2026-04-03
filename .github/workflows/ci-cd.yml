@@ -43,13 +43,13 @@ jobs:
               sudo systemctl enable docker
               sudo systemctl start docker
               sudo usermod -aG docker $USER
-              newgrp docker
+              echo "Docker installed and user added to docker group"
             else
               echo "Docker is already installed"
             fi
 
-            docker pull alfinakash/autodeploy-ec2-docker:${{ env.VERSION }}
-            docker stop autodeploy || true
-            docker rm autodeploy || true
-            docker run -d -p 80:3000 --restart unless-stopped \
+            sudo docker pull alfinakash/autodeploy-ec2-docker:${{ env.VERSION }}
+            sudo docker stop autodeploy || true
+            sudo docker rm autodeploy || true
+            sudo docker run -d -p 80:3000 --restart unless-stopped \
               --name autodeploy alfinakash/autodeploy-ec2-docker:${{ env.VERSION }}
