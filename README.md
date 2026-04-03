@@ -1,16 +1,46 @@
-# React + Vite
+# autodeploy-ec2-docker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **React frontend application** built with Vite, designed for automated deployment to **AWS EC2** using **Docker** and versioned images. Each deployment is tagged with a version number from the `VERSION` file for easy rollback.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Table of Contents
 
-## React Compiler
+1. [Project Overview](#project-overview)  
+2. [Tech Stack](#tech-stack)  
+3. [Getting Started](#getting-started)  
+4. [Docker Setup](#docker-setup)  
+5. [Versioning](#versioning)  
+6. [GitHub Actions CI/CD](#github-actions-cicd)  
+7. [Deployment on EC2](#deployment-on-ec2)  
+8. [Social Links](#social-links)  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This app serves as a **personal bio card**:  
+- Displays **basic info**: name, experience, skills  
+- Shows **social links**: Instagram, Twitter, LinkedIn, GitHub, Portfolio  
+- Displays **current app version dynamically** from a `VERSION` file  
+- Fully **responsive** and designed for a professional look  
+
+---
+
+## Tech Stack
+
+- **Frontend:** React, Vite  
+- **Styling:** Inline CSS (responsive)  
+- **Containerization:** Docker  
+- **CI/CD:** GitHub Actions  
+- **Hosting:** AWS EC2  
+
+---
+
+## Getting Started
+
+### Clone Repository
+
+```bash
+git clone https://github.com/AlfinAkash/autodeploy-ec2-docker.git
+cd autodeploy-ec2-docker
